@@ -1,0 +1,44 @@
+@import "../core/colors/palette-variables";
+
+// inline code tag
+code {
+    padding: 0.1rem 0.4rem;
+    background-color: map-get($grey-color, lighten-3);
+    border-radius: 0.2rem;
+}
+
+pre {
+    code {
+        padding: 0;
+        text-shadow: none !important;
+        .token.operator,
+        .token.url {
+            background: transparent;
+        }        
+        background-color: transparent;
+    }
+    &[class*="language-"] {
+        border-radius: $border-radius;
+        background: #f5f2f0;
+        padding: 1em;
+        margin: .5em 0;
+        overflow: auto;
+        color: black;
+        text-shadow: 0 1px white;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 1em;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+    }
+}
